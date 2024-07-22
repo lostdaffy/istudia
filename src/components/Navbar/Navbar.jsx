@@ -1,57 +1,58 @@
 import React from "react";
 import "./Navbar.css";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <h2 className="logo">
-        <i class="ri-book-open-fill"></i> istudia
+        <i className="ri-book-open-fill"></i> istudia
       </h2>
       <ul className="nav-link">
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">Courses</a>
+          <Link to="courses">Courses</Link>
         </li>
         <li className="dropdown">
-          <a>
-            Pages <i class="ri-arrow-down-s-line"></i>
-          </a>
+          <Link>
+            Pages <i className="ri-arrow-down-s-line"></i>
+          </Link>
           <div class="dropdown-content">
-            <a href="#">About Us</a>
-            <a href="#">Our Instructors</a>
-            <a href="#">Instructor Details</a>
-            <a href="#">Our Mentors</a>
-            <a href="#">Event Details</a>
-            <a href="#">Asked Question</a>
-            <a href="#">Contact</a>
+            <Link>About Us</Link>
+            <Link>Our Instructors</Link>
+            <Link>Instructor Details</Link>
+            <Link>Our Mentors</Link>
+            <Link>Event Details</Link>
+            <Link>Asked Question</Link>
+            <Link>Contact</Link>
           </div>
         </li>
 
         <li className="dropdown">
-          <a>
-            Events <i class="ri-arrow-down-s-line"></i>
-          </a>
-          <div class="dropdown-content">
-            <a href="#">About Us</a>
-            <a href="#">Our Instructors</a>
+          <Link>
+            Events <i className="ri-arrow-down-s-line"></i>
+          </Link>
+          <div className="dropdown-content">
+            <Link>About Us</Link>
+            <Link>Our Instructors</Link>
           </div>
         </li>
         <li>
-          <a href="#">Blog</a>
+          <Link>Blog</Link>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <Link>Contact Us</Link>
         </li>
       </ul>
       <div className="login">
-        <a href="">
-        <i class="ri-user-line"></i>
-        </a>
-        <a href="">
-          <i class="ri-shopping-bag-line"></i>
-        </a>
+        <Link>
+          <i className="ri-user-line"></i>
+        </Link>
+        <Link href="">
+          <i className="ri-shopping-bag-line"></i>
+        </Link>
       </div>
     </nav>
   );
